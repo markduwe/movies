@@ -358,3 +358,4 @@ function exists(data){
 	if(!data || data==null || data=='undefined' || typeof(data)=='undefined') return false;
 	else return true;
 }
+//end
