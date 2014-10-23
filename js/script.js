@@ -73,9 +73,9 @@ function upcoming() {
     	$.each(data.results, function(i,a) {
     		res += '<div class="item movie" data-movieid="'+a.id+'" data-year="'+new Date(a.release_date).getUTCFullYear()+'" data-title="'+a.original_title+'">';
     		if(a.poster_path == null) {
-    			res += '<img src="https//cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w92.jpg">';
+    			res += '<img src="https://cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w92.jpg">';
     		} else {
-    			res += '<img src="https//cf2.imgobject.com/t/p/w1280'+a.backdrop_path+'">';
+    			res += '<img src="https://cf2.imgobject.com/t/p/w1280'+a.backdrop_path+'">';
     		}
     		res += '<div class="carousel-caption">';
     		res += '<h4>'+a.original_title+'</h4>';
@@ -96,9 +96,9 @@ function search(str) {
     		res += '<div class="row movie" data-movieid="'+a.id+'" data-year="'+new Date(a.release_date).getUTCFullYear()+'" data-title="'+a.original_title+'">';
     		res += '<div class="span2">';
     		if(a.poster_path == null) {
-    			res += '<img src="https//cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w92.jpg" class="img-rounded">';
+    			res += '<img src="https://cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w92.jpg" class="img-rounded">';
     		} else {
-    			res += '<img src="https//cf2.imgobject.com/t/p/w92'+a.poster_path+'" class="img-rounded">';
+    			res += '<img src="https://cf2.imgobject.com/t/p/w92'+a.poster_path+'" class="img-rounded">';
     		}
     		res += '</div>';
     		res += '<div class="span5">';
@@ -128,7 +128,7 @@ function getMovie(str, year, title) {
     	movie += '</div>';
     	movie += '<div class="row" data-imdb="'+data.imdb_id+'">';
     	movie += '<div class="span12">';
-    	movie += '<div class="hero-unit" style="background: url(https//cf2.imgobject.com/t/p/w780'+data.backdrop_path+');">';
+    	movie += '<div class="hero-unit" style="background: url(https://cf2.imgobject.com/t/p/w780'+data.backdrop_path+');">';
     	movie += '<h1>'+data.original_title+'</h1>';
     	movie += '<h4><em>'+data.tagline+'</em></h4>';
     	movie += '</div>';
@@ -136,13 +136,13 @@ function getMovie(str, year, title) {
     	movie += '<div class="span2">';
     	movie += '<h5>Poster</h5>';
     	if(data.poster_path == null) {
-    		movie += '<img src="https//cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w185.jpg" class="img-rounded">';
+    		movie += '<img src="https://cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w185.jpg" class="img-rounded">';
     	} else {
-	    	movie += '<img src="https//cf2.imgobject.com/t/p/w185'+data.poster_path+'" class="img-rounded">';
+	    	movie += '<img src="https://cf2.imgobject.com/t/p/w185'+data.poster_path+'" class="img-rounded">';
     	}
     	if(exists(data.belongs_to_collection)) {
 	    	movie += '<h5>Part of</h5>';
-	    	movie += '<img src="https//cf2.imgobject.com/t/p/w185'+data.belongs_to_collection.poster_path+'" class="img-rounded">';	 
+	    	movie += '<img src="https://cf2.imgobject.com/t/p/w185'+data.belongs_to_collection.poster_path+'" class="img-rounded">';	 
 	    	movie += '<p>'+data.belongs_to_collection.name+'</p>';   	
     	}
     	movie += '<h5>Released</h5>';
@@ -158,9 +158,9 @@ function getMovie(str, year, title) {
     	movie += '<h5>Crew</h5>';
     	$.each(data.casts.crew, function(i,a) {
     		if(a.profile_path == null) {
-    			movie += '<div class="row castcrew" data-id="'+a.id+'"><div class="span1"><img src="https//cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w45.jpg" class="img-rounded"></div><div class="span3"><strong>'+a.job+'</strong>:<br/>'+a.name + '</div></div>';
+    			movie += '<div class="row castcrew" data-id="'+a.id+'"><div class="span1"><img src="https://cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w45.jpg" class="img-rounded"></div><div class="span3"><strong>'+a.job+'</strong>:<br/>'+a.name + '</div></div>';
     		} else {
-    			movie += '<div class="row castcrew" data-id="'+a.id+'"><div class="span1"><img src="https//cf2.imgobject.com/t/p/w45'+a.profile_path+'" class="img-rounded"></div><div class="span3"><strong>'+a.job+'</strong>:<br/>'+a.name + '</div></div>';
+    			movie += '<div class="row castcrew" data-id="'+a.id+'"><div class="span1"><img src="https://cf2.imgobject.com/t/p/w45'+a.profile_path+'" class="img-rounded"></div><div class="span3"><strong>'+a.job+'</strong>:<br/>'+a.name + '</div></div>';
     		}
     	});
     	movie += '</div>';
@@ -168,9 +168,9 @@ function getMovie(str, year, title) {
     	movie += '<h5>Cast</h5>';
     	$.each(data.casts.cast, function(i,a) {
     		if(a.profile_path == null) {
-	    		movie += '<div class="row castcrew" data-id="'+a.id+'"><div class="span1"><img src="https//cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w45.jpg" class="img-rounded"></div><div class="span3"><strong>'+a.character+'</strong>:<br/>'+a.name + '</div></div>';
+	    		movie += '<div class="row castcrew" data-id="'+a.id+'"><div class="span1"><img src="https://cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w45.jpg" class="img-rounded"></div><div class="span3"><strong>'+a.character+'</strong>:<br/>'+a.name + '</div></div>';
 	    	} else {
-	    		movie += '<div class="row castcrew" data-id="'+a.id+'"><div class="span1"><img src="https//cf2.imgobject.com/t/p/w45'+a.profile_path+'" class="img-rounded"></div><div class="span3"><strong>'+a.character+'</strong>:<br/>'+a.name + '</div></div>';
+	    		movie += '<div class="row castcrew" data-id="'+a.id+'"><div class="span1"><img src="https://cf2.imgobject.com/t/p/w45'+a.profile_path+'" class="img-rounded"></div><div class="span3"><strong>'+a.character+'</strong>:<br/>'+a.name + '</div></div>';
 	    	}
     	});
     	movie += '</div>';
@@ -201,7 +201,7 @@ function getMovie(str, year, title) {
     	movie += '<h5>You might also like</h5>';
     	movie += '<ul class="thumbnails">';
     	$.each(data.similar_movies.results, function(i,a) {
-    		movie += '<li class="span2"><div class="thumbnail"><img src="https//cf2.imgobject.com/t/p/w92'+a.poster_path+'" class="img-rounded"></div></li>';
+    		movie += '<li class="span2"><div class="thumbnail"><img src="https://cf2.imgobject.com/t/p/w92'+a.poster_path+'" class="img-rounded"></div></li>';
     		if ( i == 5 ) return false;
     	});
     	movie += '</ul>'
@@ -211,7 +211,7 @@ function getMovie(str, year, title) {
 //    	movie += '<div class="span12">';
 //    	movie += '<h5>Posters</h5>';
 //    	$.each(data.images.posters, function(i,a) {
-//    		movie += '<li class="span1 thumbnail"><img src="https//cf2.imgobject.com/t/p/w185'+a.file_path+'" class="img-rounded"></li>';
+//    		movie += '<li class="span1 thumbnail"><img src="https://cf2.imgobject.com/t/p/w185'+a.file_path+'" class="img-rounded"></li>';
 //    	});
 //    	movie += '</div>'
 //    	movie += '</div>';
@@ -238,7 +238,7 @@ function getMovie(str, year, title) {
 
 function netflix(title, year) {
     var nfTitle = escape(title);
-    var netflix = "https//odata.netflix.com/Catalog/Titles?$filter=Name%20eq%20%27"+nfTitle+"%27%20and%20ReleaseYear%20eq%20"+year+"&$format=json&$callback=net";
+    var netflix = "https://odata.netflix.com/Catalog/Titles?$filter=Name%20eq%20%27"+nfTitle+"%27%20and%20ReleaseYear%20eq%20"+year+"&$format=json&$callback=net";
     $('#nfMovie').html('<img src="img/ajax-loader.gif">');
     $.ajax({
     	dataType: "jsonp",
@@ -286,9 +286,9 @@ function person(str) {
     	movie += '<div class="row">';
     	movie += '<div class="span2">';	
     	if(data.profile_path == null) {
-    		movie += '<p><img src="https//cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w185.jpg" class="img-rounded"></p>';
+    		movie += '<p><img src="https://cf2.themoviedb.org/assets/e6497422f20fa/images/no-poster-w185.jpg" class="img-rounded"></p>';
     	} else {
-	    	movie += '<p><img src="https//cf2.imgobject.com/t/p/w185'+data.profile_path+'" class="img-rounded"></p>';
+	    	movie += '<p><img src="https://cf2.imgobject.com/t/p/w185'+data.profile_path+'" class="img-rounded"></p>';
     	}
     	movie += '<p><strong>Born</strong>: '+Date.parse(data.birthday, 'yyyy-M-d').toString('ddd, d MMM, yyyy')+' in '+data.place_of_birth+'</p>';
     	if(data.deathday != '') {
@@ -308,7 +308,7 @@ function person(str) {
     		movie += '<h5>Actor</h5>'
 	    	$.each(data.credits.cast, function(i,a) {
 	    		movie += '<div class="media">';
-	    		movie += '<a class="pull-left"><img src="https//cf2.imgobject.com/t/p/w92'+a.poster_path+'" width="50"></a>';
+	    		movie += '<a class="pull-left"><img src="https://cf2.imgobject.com/t/p/w92'+a.poster_path+'" width="50"></a>';
 	    		movie += '<div class="media-body"><h6 class="media-heading">'+a.original_title+'</h6>'+a.character+'</div>';
 	    		movie += '</div>';
 	    	});
@@ -317,7 +317,7 @@ function person(str) {
     		movie += '<h5>Crew</h5>'
 	    	$.each(data.credits.crew, function(i,a) {
 	    		movie += '<div class="media">';
-	    		movie += '<a class="pull-left"><img src="https//cf2.imgobject.com/t/p/w92'+a.poster_path+'" width="50"></a>';
+	    		movie += '<a class="pull-left"><img src="https://cf2.imgobject.com/t/p/w92'+a.poster_path+'" width="50"></a>';
 	    		movie += '<div class="media-body"><h6 class="media-heading">'+a.original_title+'</h6>'+a.job+'</div>';
 	    		movie += '</div>';
 	    	});
@@ -331,7 +331,7 @@ function person(str) {
 
 function playInstant(NetflixApiId,Available,MovieId){
 	var playThis = NetflixApiId.substring(45);
-	nflx.openPlayer('https//api.netflix.com/catalog/movie/' + playThis, 0, 0, devKey);
+	nflx.openPlayer('https://api.netflix.com/catalog/movie/' + playThis, 0, 0, devKey);
 }
 function addQueue(NetflixApiId,Available,MovieId){
 	var addThis = NetflixApiId.substring(45);
@@ -339,7 +339,7 @@ function addQueue(NetflixApiId,Available,MovieId){
 	var getY = $(window).height()/2;
 	getX = getX - 200;
 	getY = getY;
-	nflx.addToQueue('https//api.netflix.com/catalog/movie/' + addThis, getX, getY, devKey, 'devKey', 'addMe');
+	nflx.addToQueue('https://api.netflix.com/catalog/movie/' + addThis, getX, getY, devKey, 'devKey', 'addMe');
 }
 
 
