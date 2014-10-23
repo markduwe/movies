@@ -1,0 +1,87 @@
+.movie, .castcrew {
+	cursor: pointer;
+}
+.row {
+	padding: 10px 0;
+}
+.movie:hover, .castcrew:hover {
+	background: #efefef;
+}
+.hero-unit {
+	background-position: center center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+a {
+	cursor: pointer;
+}
+.media {
+	overflow: hidden;
+	margin: 0 0 10px 0;
+}
+#nfMovie {
+	text-align: center;
+	padding: 5px 0;
+	background: #B9090B;
+	color: #fff;
+	margin: 15px 0 0 0;
+}
+#nfMovieStuff.active, #nfMovieStuff.queue {
+	padding: 0 0 60px;
+	background: #B9090B url(http://developer.netflix.com/public/Mashery/images/clients/netflix/logo.gif) no-repeat center bottom;
+	background-size: contain;
+	text-align: center;
+	color: #fff;
+}
+.flag {
+	text-indent: 20px;
+	background-position: left center;
+	background-repeat: no-repeat !important;
+	line-height: 20px;
+}
+.US {
+	background: url(../img/flags/United-States-Flag-16.png);
+}
+.GB {
+	background: url(../img/flags/United-Kingdom-Flag-16.png);
+}
+.RU {
+	background: url(../img/flags/Russia-Flag-16.png);
+}
+.IT {
+	background: url(../img/flags/Italy-Flag-16.png);
+}
+.HU {
+	background: url(../img/flags/Hungary-Flag-16.png);
+}
+.DE {
+	background: url(../img/flags/Germany-Flag-16.png);
+}
+.ES {
+	background: url(../img/flags/Spain-Flag-16.png);
+}
+.FR {
+	background: url(../img/flags/France-Flag-16.png);
+}
+.NO {
+	background: url(../img/flags/Norway-Flag-16.png);
+}
+.CZ {
+	background: url(../img/flags/Czech-Republic-Flag-16.png);
+}
+.DK {
+	background: url(../img/flags/Denmark16.png);
+}
+.CA {
+	background: url(../img/flags/Canada-Flag-16.png);
+}
+.MT {
+	background: url(../img/flags/Malta-Flag-16.png);
+}
+.NL {
+	background: url(../img/flags/Netherlands-Flag-16.png);
+}
+.FI {
+	background: url(../img/flags/Finland-Flag-16.png);
+}
